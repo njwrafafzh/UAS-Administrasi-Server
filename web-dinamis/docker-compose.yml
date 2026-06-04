@@ -1,0 +1,46 @@
+services:
+  db-webdinamis:
+    image: mariadb:lts
+    environment:
+      MARIADB_ROOT_PASSWORD: password!123
+      MARIADB_DATABASE: dbcompro_nim
+      MARIADB_USER: userwebdinamis_nim
+      MARIADB_PASSWORD: O)xz6GWEwDOx1Ea9
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db_data/dbcompro_nim.sql:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
+    networks:
+      - uas_network
+    restart: always
+
+  container-statis:
+    image: fauziahrafa/uas_statis_2388010005:latest
+    ports:
+      - "80:80"
+    restart: always
+
+  container-dinamis:
+    image: fauziahrafa/uas_dinamis_2388010005:latest
+    ports:
+      - "3000:3000"
+    environment:
+      # 🔥 DI SINI KITA MENYUAPI VARIABEL YANG DICARI NEXT.JS
+      DB_HOST: db-webdinamis
+      DB_PORT: 3306
+      DB_USER: userwebdinamis_nim
+      DB_PASSWORD: O)xz6GWEwDOx1Ea9
+      DB_NAME: dbcompro_nim
+      NEXTAUTH_SECRET: ini-kata-kata-bebas-saja-32-karekter
+      NEXTAUTH_URL: http://52.221.233.107:3000
+    depends_on:
+      - db-webdinamis
+    networks:
+      - uas_network
+    restart: always
+
+volumes:
+  db_data: {}
+
+networks:
+  uas_network:
+    driver: bridge
