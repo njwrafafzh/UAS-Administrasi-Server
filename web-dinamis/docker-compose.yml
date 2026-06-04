@@ -1,6 +1,9 @@
+version: '3.8'
+
 services:
   db-webdinamis:
     image: mariadb:lts
+    container_name: db-webdinamis
     environment:
       MARIADB_ROOT_PASSWORD: password!123
       MARIADB_DATABASE: dbcompro_nim
@@ -8,6 +11,7 @@ services:
       MARIADB_PASSWORD: O)xz6GWEwDOx1Ea9
     volumes:
       - db_data:/var/lib/mysql
+      # Jalur relatif disesuaikan karena letak compose selevel dengan folder db_data di EC2 nanti
       - ./db_data/dbcompro_nim.sql:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
     networks:
       - uas_network
@@ -15,16 +19,18 @@ services:
 
   container-statis:
     image: fauziahrafa/uas_statis_2388010005:latest
+    container_name: container-statis
     ports:
       - "80:80"
     restart: always
 
   container-dinamis:
+    # 🔥 PERBAIKAN: Tag disamakan dengan apa yang di-push oleh GitHub Actions
     image: fauziahrafa/uas_dinamis_2388010005:latest
+    container_name: container-dinamis
     ports:
       - "3000:3000"
     environment:
-      # 🔥 DI SINI KITA MENYUAPI VARIABEL YANG DICARI NEXT.JS
       DB_HOST: db-webdinamis
       DB_PORT: 3306
       DB_USER: userwebdinamis_nim
