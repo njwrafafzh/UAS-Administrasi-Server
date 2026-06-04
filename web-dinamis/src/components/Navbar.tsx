@@ -17,7 +17,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold text-primary-900 tracking-tight"
           >
-            Anagata Cake
+            Anagata Cake.
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
