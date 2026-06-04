@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Najwa Rafa Fauziah</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e6f2ff, #f0f8ff);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a7c7e7, #cde7ff);
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+        }
+
+        header p {
+            color: #555;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        h2 {
+            color: #4a90e2;
+            border-bottom: 2px solid #a7c7e7;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Skill Bar */
+        .skill {
+            margin: 10px 0;
+        }
+
+        .skill-name {
+            font-size: 14px;
+        }
+
+        .skill-bar {
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 10px;
+            background: #4a90e2;
+            width: 0;
+            animation: fillSkill 2s forwards;
+        }
+
+        @keyframes fillSkill {
+            from { width: 0; }
+        }
+
+        .design { width: 90%; }
+        .html { width: 80%; }
+        .editing { width: 85%; }
+
+        footer {
+            background: linear-gradient(135deg, #a7c7e7, #cde7ff);
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer b {
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="cv rafa.jpeg" alt="Foto Profil">
+    <h1>Najwa Rafa Fauziah</h1>
+    <p>Mahasiswa | Desainer Pemula</p>
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>Data Diri</h2>
+            <p><b>Nama:</b> Najwa Rafa Fauziah</p>
+            <p><b>NIM:</b> 2388010005</p>
+            <p><b>Email:</b> najwarafa6@email.com</p>
+            <p><b>Alamat:</b> Indonesia</p>
+        </div>
+
+        <div class="card">
+            <h2>Tentang Saya</h2>
+            <p>
+                Saya adalah mahasiswa yang memiliki minat dalam desain dan teknologi.
+                Saya senang belajar hal baru terutama dalam pengembangan web dan desain grafis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Riwayat Pendidikan</h2>
+            <ul>
+                <li>TK Citra Permata</li>
+                <li>MI Negeri 7 Tangerang</li>
+                <li>SMP Negeri 1 Palimanan</li>
+                <li>SMA Negeri 1 Palimanan</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Skill</h2>
+
+            <div class="skill">
+                <div class="skill-name">Desain Grafis</div>
+                <div class="skill-bar">
+                    <div class="skill-fill design"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">HTML & CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-fill html"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Editing Foto</div>
+                <div class="skill-bar">
+                    <div class="skill-fill editing"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <b>Dideploy oleh: Najwa Rafa Fauziah - 2388010005</b>
+</footer>
+
+</body>
+</html>
