@@ -22,7 +22,7 @@ jobs:
       with:
         context: ./web-dinamis
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/UAS:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/uas:latest
 
   deploy-to-ec2:
     runs-on: ubuntu-latest
