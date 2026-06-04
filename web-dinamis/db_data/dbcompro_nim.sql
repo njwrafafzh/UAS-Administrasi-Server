@@ -63,10 +63,10 @@ CREATE TABLE `ecosystems` (
 --
 
 INSERT INTO `ecosystems` (`id`, `name`, `description`, `image`, `createdAt`) VALUES
-(1, 'Anagata Celebration Cake', 'Kue ulang tahun dan perayaan custom premium dengan desain modern, estetik, dan tekstur yang lembut.', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=60', '2026-06-03 15:08:02'),
-(2, 'Anagata Korean Bento Cake', 'Kue tart mini berdiameter 10cm bergaya Korea yang imut, dikemas dalam kotak styrofoam, pas untuk hadiah personal.', 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=60', '2026-06-03 15:08:02'),
-(3, 'Anagata Slice Cake', 'Potongan kue premium dengan berbagai varian rasa seperti Chocolate Fudge, Matcha, dan Red Velvet yang siap menemani harimu.', 'https://images.unsplash.com/photo-1535141192574-5d4897c13636?w=500&auto=format&fit=crop&q=60', '2026-06-03 15:08:02'),
-(4, 'Anagata Pastry & Croissant', 'Aneka pastry dan croissant renyah bermentega yang dipanggang segar setiap hari dari dapur Anagata.', 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop&q=60', '2026-06-03 15:08:02');
+(1, 'Anagata Celebration Cake', 'Kue ulang tahun dan perayaan custom premium dengan desain modern, estetik, dan tekstur yang lembut.', 'assets/images/kie.jpg', '2026-06-03 15:08:02'),
+(2, 'Anagata Korean Bento Cake', 'Kue tart mini berdiameter 10cm bergaya Korea yang imut, dikemas dalam kotak styrofoam, pas untuk hadiah personal.', 'assets/images/kie.jpg', '2026-06-03 15:08:02'),
+(3, 'Anagata Slice Cake', 'Potongan kue premium dengan berbagai varian rasa seperti Chocolate Fudge, Matcha, dan Red Velvet yang siap menemani harimu.', 'assets/images/kie.jpg', '2026-06-03 15:08:02'),
+(4, 'Anagata Pastry & Croissant', 'Aneka pastry dan croissant renyah bermentega yang dipanggang segar setiap hari dari dapur Anagata.', 'assets/images/kie.jpg', '2026-06-03 15:08:02');
 -- --------------------------------------------------------
 
 --

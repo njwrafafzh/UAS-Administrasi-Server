@@ -1,4 +1,5 @@
 import Image from "next/image";
+import kieImage from "../../assets/images/kie.jpg";
 
 export default function HeroSection() {
   return (
@@ -65,7 +66,7 @@ export default function HeroSection() {
           <div className="relative lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://i.pinimg.com/736x/0e/8a/67/0e8a675434805a65b4c511b7cefc9b5f.jpg"
+                src={kieImage}
                 alt="Kue Anagata"
                 width={600}
                 height={500}
