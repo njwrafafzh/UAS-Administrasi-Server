@@ -65,7 +65,7 @@ export default function HeroSection() {
           <div className="relative lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+                src="https://i.pinimg.com/736x/0e/8a/67/0e8a675434805a65b4c511b7cefc9b5f.jpg"
                 alt="Kue Anagata"
                 width={600}
                 height={500}

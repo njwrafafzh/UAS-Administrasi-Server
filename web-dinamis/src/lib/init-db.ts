@@ -88,7 +88,7 @@ export async function seedDummyData() {
   }
 
   const contacts = [
-    ["Budi Santoso", "budi@contoh.com", "Saya tertarik bekerja sama dengan Konfigura Tech."],
+    ["Budi Santoso", "budi@contoh.com", "Saya tertarik bekerja sama dengan ."],
     ["Siti Nurhaliza", "siti@perusahaan.id", "Ingin info lebih lanjut tentang program CSR."],
     ["Andi Wijaya", "andi@startup.id", "Permintaan partnership untuk proyek farm."],
   ];
