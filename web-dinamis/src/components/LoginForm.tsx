@@ -35,9 +35,9 @@ export default function LoginForm() {
 
   return (
     <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-neutral-200 p-8">
-      <h1 className="text-2xl font-bold text-primary-900 mb-1">Masuk Admin</h1>
+      <h1 className="text-2xl font-bold text-primary-900 mb-1">Masuk Admin Toko Kue</h1>
       <p className="text-neutral-600 mb-6">
-        Akses panel administratif Konfigura Corp.
+        Akses panel administratif Toko Kue Anagata.
       </p>
 
       {error && (
