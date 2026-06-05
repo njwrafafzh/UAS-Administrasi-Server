@@ -4,7 +4,7 @@ import { ProjectForm } from "@/components/admin/AdminForm";
 export default function AdminProjectsNewPage() {
   return (
     <div className="space-y-6">
-      <AdminHeader title="Tambah Project" description="Tambahkan proyek baru ke database." />
+      <AdminHeader title="Tambah Daftar Kue" description="Tambahkan daftar kue baru ke database." />
       <ProjectForm mode="create" />
     </div>
   );

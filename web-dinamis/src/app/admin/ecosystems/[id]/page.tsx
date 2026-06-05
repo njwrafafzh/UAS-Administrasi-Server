@@ -20,7 +20,7 @@ export default async function AdminEcosystemEditPage({ params }: { params: Promi
 
   return (
     <div className="space-y-6">
-      <AdminHeader title="Edit Ecosystem" description="Ubah data unit bisnis." />
+      <AdminHeader title="Edit Jenis Kue" description="Ubah data jenis kue." />
       <EcosystemForm mode="edit" initialData={rows[0]} />
     </div>
   );

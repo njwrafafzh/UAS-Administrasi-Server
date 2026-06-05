@@ -21,7 +21,7 @@ export default async function AdminProjectEditPage({ params }: { params: Promise
 
   return (
     <div className="space-y-6">
-      <AdminHeader title="Edit Project" description="Ubah data proyek." />
+      <AdminHeader title="Edit Daftar Kue" description="Ubah data daftar kue." />
       <ProjectForm mode="edit" initialData={rows[0]} />
     </div>
   );

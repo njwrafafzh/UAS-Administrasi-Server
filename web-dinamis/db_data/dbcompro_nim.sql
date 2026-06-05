@@ -123,7 +123,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `role`, `createdAt`) VALUES
-(1, 'admin@konfigura.co.id', '$2a$10$tGG4.zmartKJZ1fDRQJbmuw8Gjueh7.DO0bpv7rUbGrEf8mpwOHrW', 'Admin Konfigura', 'admin', '2026-06-03 14:35:21');
+(1, 'admin@anagata.co.id', '$2a$10$tGG4.zmartKJZ1fDRQJbmuw8Gjueh7.DO0bpv7rUbGrEf8mpwOHrW', 'Admin Konfigura', 'admin', '2026-06-03 14:35:21');
 
 --
 -- Indexes for dumped tables

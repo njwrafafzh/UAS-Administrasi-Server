@@ -56,7 +56,7 @@ export default function LoginForm() {
             type="email"
             required
             className="mt-1 w-full rounded-lg border border-neutral-300 px-4 py-2.5 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition"
-            placeholder="admin@konfigura.co.id"
+            placeholder="admin@anagata.co.id"
           />
         </div>
 
