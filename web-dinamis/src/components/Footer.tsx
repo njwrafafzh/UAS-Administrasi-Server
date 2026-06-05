@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-primary-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-primary-300">
-          <p>© {new Date().getFullYear()} Anagata Cake. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Anagata Cake. All rights reserved. Najwa rafa fauziah-2388010005</p>
           <p className="mt-2 md:mt-0">Jakarta, Indonesia</p>
         </div>
       </div>
