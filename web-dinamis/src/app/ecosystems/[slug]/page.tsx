@@ -1,27 +1,41 @@
-import { ecosystems } from "@/data/ecosystems";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { notFound } from "next/navigation";
+import { query } from "@/lib/db";
+import { slugify } from "@/lib/slug";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateStaticParams() {
-  return ecosystems.map((eco) => ({ slug: eco.slug }));
-}
+type EcosystemItem = {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+};
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const eco = ecosystems.find((e) => e.slug === slug);
-  if (!eco) return {};
+  const ecosystems = await query<EcosystemItem>(
+    "SELECT id, name, description, image FROM ecosystems"
+  );
+  const eco = ecosystems.find((item) => slugify(item.name) === slug);
+
+  if (!eco) return {}; 
+
   return {
-    title: eco.title,
+    title: eco.name,
     description: eco.description,
   };
 }
 
 export default async function EcosystemDetailPage({ params }: Props) {
   const { slug } = await params;
-  const eco = ecosystems.find((e) => e.slug === slug);
+  const ecosystems = await query<EcosystemItem>(
+    "SELECT id, name, description, image FROM ecosystems"
+  );
+  const eco = ecosystems.find((item) => slugify(item.name) === slug);
 
   if (!eco) {
     notFound();
@@ -34,15 +48,12 @@ export default async function EcosystemDetailPage({ params }: Props) {
         <div className="relative rounded-2xl overflow-hidden mb-12 h-[320px]">
           <img
             src={eco.image}
-            alt={eco.title}
+            alt={eco.name}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent" />
           <div className="absolute bottom-0 left-0 p-8">
-            <span className="text-xs font-semibold text-primary-100 uppercase tracking-wider mb-2 block">
-              {eco.subtitle}
-            </span>
-            <h1 className="text-4xl font-bold text-white">{eco.title}</h1>
+            <h1 className="text-4xl font-bold text-white">{eco.name}</h1>
           </div>
         </div>
         <div className="max-w-3xl">

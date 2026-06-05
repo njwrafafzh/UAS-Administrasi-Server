@@ -16,7 +16,7 @@ export default async function AdminEcosystemsPage() {
 
   return (
     <div className="space-y-6">
-      <AdminHeader title="Ecosystems" description="Kelola data unit bisnis Konfigura." />
+      <AdminHeader title="Jenis Kue" description="Kelola data jenis kue Anagata." />
       <DataTable
         columns={[
           { key: "id", label: "ID" },

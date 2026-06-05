@@ -30,28 +30,28 @@ export default async function AdminDashboardPage() {
 
   return (
     <div className="space-y-8">
-      <AdminHeader title="Dashboard" description="Ringkasan data utama Konfigura." />
+      <AdminHeader title="Dashboard Toko Kue" description="Ringkasan data utama Toko Kue Anagata." />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <StatsCard title="Ecosystems" value={ecosystemCount} trend="Data live dari database" />
-        <StatsCard title="Projects" value={projectCount} trend="Data live dari database" />
-        <StatsCard title="Contacts" value={contactCount} trend="Data live dari database" />
+        <StatsCard title="Jenis Kue" value={ecosystemCount} trend="Data live dari database" />
+        <StatsCard title="Daftar Kue" value={projectCount} trend="Data live dari database" />
+        <StatsCard title="Kontak" value={contactCount} trend="Data live dari database" />
       </div>
 
       <div className="space-y-4">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-xl font-semibold text-neutral-900">Recent Projects</h2>
-            <p className="text-sm text-neutral-500">Lihat proyek terbaru yang tersimpan di database.</p>
+            <h2 className="text-xl font-semibold text-neutral-900">Kue Terbaru</h2>
+            <p className="text-sm text-neutral-500">Lihat daftar kue terbaru yang tersimpan di database.</p>
           </div>
         </div>
 
         <DataTable
           columns={[
             { key: "id", label: "ID" },
-            { key: "title", label: "Judul" },
+            { key: "title", label: "Judul Kue" },
             { key: "status", label: "Status" },
-            { key: "unit", label: "Unit" },
+            { key: "unit", label: "Jenis" },
           ]}
           rows={recentProjects}
           addHref="/admin/projects/new"

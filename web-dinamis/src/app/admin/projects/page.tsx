@@ -16,7 +16,7 @@ export default async function AdminProjectsPage() {
 
   return (
     <div className="space-y-6">
-      <AdminHeader title="Projects" description="Kelola proyek dan program Konfigura." />
+      <AdminHeader title="Daftar Kue" description="Kelola daftar kue dan status pesanan." />
       <DataTable
         columns={[
           { key: "id", label: "ID" },
